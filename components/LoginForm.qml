@@ -51,7 +51,7 @@ LoginFormLayout {
             onAccepted: startLogin()
         	focus: true
 
-            font.pointSize: usernameFontSize * 0.9
+            font.pointSize: usernameFontSize
             implicitWidth: root.width / 5
             implicitHeight: usernameFontSize * 2.75
             opacity: 0.5
@@ -60,7 +60,7 @@ LoginFormLayout {
                 textColor: passwordFieldOutlined ? "white" : "black"
                 placeholderTextColor: passwordFieldOutlined ? "white" : "black"
                 background: Rectangle {
-                    radius: 16
+                    radius: 21
                     border.color: "white"
                     border.width: 1
                     color: passwordFieldOutlined ? "transparent" : "white"
