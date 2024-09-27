@@ -60,7 +60,7 @@ LoginFormLayout {
                 textColor: passwordFieldOutlined ? "white" : "black"
                 placeholderTextColor: passwordFieldOutlined ? "white" : "black"
                 background: Rectangle {
-                    radius: 3
+                    radius: 16
                     border.color: "white"
                     border.width: 1
                     color: passwordFieldOutlined ? "transparent" : "white"
