@@ -48,53 +48,53 @@ Item {
             duration: 150
         }
     }
-
-    Item {
-        id: imageSource
-        width: faceSize
-        height: faceSize
-        anchors.horizontalCenter: parent.horizontalCenter
-
-        // Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
-        Image {
-            id: face
-            source: wrapper.avatarPath
-            sourceSize: Qt.size(faceSize, faceSize)
-            anchors.fill: parent
-            fillMode: Image.PreserveAspectCrop
-            smooth: true
-            visible: false
-        }
-        Image {
-            id: mask
-            source: "../assets/mask.svgz"
-            sourceSize: Qt.size(faceSize, faceSize)
-            smooth: true
-        }
-        OpacityMask {
-            anchors.fill: face
-            source: face
-            maskSource: mask
-            cached: true
-        }
-    }
-
-    Label {
-        id: usernameLabel
-
-        color: usernameFontColor
-        font.capitalization: Font.Capitalize
-        font.pointSize: usernameFontSize * 1.2
-        renderType: Text.QtRendering
-        anchors.top: imageSource.bottom
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: usernameLabel.height / 1.2
-        text: wrapper.name
-        horizontalAlignment: Text.AlignHCenter
-        // Make an indication that this has active focus, this only happens when reached with keyboard navigation
-        font.underline: wrapper.activeFocus
-    }
-
+/*
+*    Item {
+*        id: imageSource
+*        width: faceSize
+*        height: faceSize
+*        anchors.horizontalCenter: parent.horizontalCenter
+*
+*        // Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
+*        Image {
+*            id: face
+*            source: wrapper.avatarPath
+*            sourceSize: Qt.size(faceSize, faceSize)
+*            anchors.fill: parent
+*            fillMode: Image.PreserveAspectCrop
+*            smooth: true
+*            visible: false
+*        }
+*        Image {
+*            id: mask
+*            source: "../assets/mask.svgz"
+*            sourceSize: Qt.size(faceSize, faceSize)
+*            smooth: true
+*        }
+*        OpacityMask {
+*            anchors.fill: face
+*            source: face
+*            maskSource: mask
+*            cached: true
+*        }
+*    }
+*
+*    Label {
+*        id: usernameLabel
+*
+*        color: usernameFontColor
+*        font.capitalization: Font.Capitalize
+*        font.pointSize: usernameFontSize * 1.2
+*        renderType: Text.QtRendering
+*        anchors.top: imageSource.bottom
+*        anchors.horizontalCenter: parent.horizontalCenter
+*        anchors.topMargin: usernameLabel.height / 1.2
+*        text: wrapper.name
+*        horizontalAlignment: Text.AlignHCenter
+*        // Make an indication that this has active focus, this only happens when reached with keyboard navigation
+*        font.underline: wrapper.activeFocus
+*    }
+*/
     MouseArea {
         anchors.fill: parent
         hoverEnabled: true
